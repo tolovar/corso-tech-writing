@@ -1,4 +1,3 @@
-Note veloci — domande che mi faccio aprendo il progetto
 
 - Come lo avvio? `python src/main.py` basta o serve qualcos'altro?
 - Devo avere Python installato? Quale versione devo usare?
@@ -14,8 +13,3 @@ Note veloci — domande che mi faccio aprendo il progetto
 - `utils.js` è vuoto — serve davvero? posso eliminarlo?
 
 - Dove finiscono i log? Come abilito una modalità debug per vedere cosa succede?
-
-Piccolo piano per partire:
-  1) Mettere un `README.md` con il comando minimo per avviare.
-  2) Fornire un `config.example.json` o `.env.example` che mostri `API_KEY_SECRET_V2`.
-  3) Documentare `process_data` con 1-2 esempi concreti.

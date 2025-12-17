@@ -1,0 +1,30 @@
+name: Publish Docs
+
+# 1. Trigger: Quando succede questo?
+on:
+  push:
+    branches:
+      - main # Esegui solo quando si scrive sul branch principale
+
+# 2. Permessi: Cosa può fare il robot?
+permissions:
+  contents: write # Serve per scrivere sul branch gh-pages
+
+# 3. Jobs: Il lavoro da fare
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Usa una macchina virtuale Linux
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # Scarica il tuo codice
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install mkdocs-material # Installa il generatore
+
+      - name: Build & Deploy
+        run: mkdocs gh-deploy --force # Il comando magico
